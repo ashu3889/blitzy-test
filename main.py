@@ -1,5 +1,10 @@
+import os
+
 def main():
-    print("Hello, World!")
+    app_env = os.getenv("APP_ENV", "development")
+    greeting = os.getenv("GREETING", "Hello")
+    name = os.getenv("NAME", "World")
+    print(f"[{app_env}] {greeting}, {name}!")
 
 
 if __name__ == "__main__":
